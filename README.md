@@ -2,7 +2,13 @@
 
 ## setup
 
-create the database according to the sql that is included at src/database/db.sql;
+run 
+```bash
+dart pub get
+```
+to get all dependencies
+
+create the database according to the sql that is included at src/database/db.sql (on the node branch);
 
 when done start up the server as defined below and first touch the /charge_locations/sync endpoint.
 after this you can reach /charge_locations/ and actually get results
@@ -12,14 +18,7 @@ after this you can reach /charge_locations/ and actually get results
 You can run the API using:
 
 ```bash
-# Run with ts-node
-npm run start
-
-# Run with ts-node and debugger
-npm run start:debug
-
-# Live development using nodemon and TS sources
-npm run watch
+dart run src/main.dart
 ```
 
 To Export the mandatory fields for starting the service up locally
