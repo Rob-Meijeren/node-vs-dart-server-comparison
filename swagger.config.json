@@ -1,0 +1,63 @@
+{
+  "swagger": {
+    "name":            "Node vs Dart server comparison",
+    "description":     "",
+    "host":            "localhost",
+    "outputDirectory": "./src/public",
+    "entryFile":       "./src/index.ts",
+    "consumes":        [ "application/json" ],
+    "produces":        [ "application/json" ],
+    "yaml":            true,
+    "basePath":        "/",
+    "securityDefinitions": {
+      "api_key": {
+          "type": "apiKey",
+          "name": "access_token",
+          "in": "header"
+      }
+    },
+    "spec": {
+      "schemes": [ "https" ],
+      "paths": {
+        "/docs": {
+          "get": {
+            "operationId": "DocsFetch",
+            "produces": [
+              "text/html"
+            ],
+            "responses": {
+              "200": {
+                "description": "Ok"
+              }
+            },
+            "description": "This returns the API documentation",
+            "summary": "the API documenation.",
+            "tags": [
+              "server"
+            ],
+            "parameters": []
+          }
+        },
+        "/docs/swagger.json": {
+          "get": {
+            "operationId": "SwaggerFetch",
+            "produces": [
+              "application/json"
+            ],
+            "responses": {
+              "200": {
+                "description": "Ok"
+              }
+            },
+            "description": "This returns the API swagger specification",
+            "summary": "API swagger specification.",
+            "tags": [
+              "server"
+            ],
+            "parameters": []
+          }
+        }
+      }
+    }
+  }
+}

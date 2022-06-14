@@ -1,0 +1,10 @@
+{
+    "verbose": true,
+    "execMap": {
+      "ts": "TS_NODE_FILES=true node -r 'ts-node/register'"
+    },
+    "watch": [
+        "src/"
+    ],
+    "ext": "js ts json"
+}
